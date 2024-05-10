@@ -1,6 +1,3 @@
-Of course! Here's the README.md file formatted accordingly:
-
-```markdown
 # Custom Hooks in React
 
 ## Introduction
@@ -33,7 +30,6 @@ When creating custom hooks, it's important to follow certain rules to ensure the
 
 Here's an example of a custom hook for managing form state:
 
-```javascript
 import { useState } from 'react';
 
 const useForm = (initialState) => {
@@ -51,10 +47,10 @@ const useForm = (initialState) => {
 };
 
 export default useForm;
-```
+
 
 ## Conclusion
 
 Custom hooks are a powerful tool for organizing and reusing logic in React applications. By following the rules outlined in this guide, you can create custom hooks that improve code maintainability, promote code reusability, and enhance the overall development experience.
 
-```
+
