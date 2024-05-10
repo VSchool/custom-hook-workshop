@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Custom hooks are a powerful feature in React that allow you to extract and reuse stateful logic across multiple components. This guide provides an overview of custom hooks, their benefits, and best practices for creating them in your React projects using Visual Studio Code (VSCode).
+Custom hooks are a powerful feature in React that allow you to extract and reuse stateful logic across multiple components. This guide provides an overview of custom hooks, their benefits, and best practices for creating them in your React projects.
 
 ## What are Custom Hooks?
 
