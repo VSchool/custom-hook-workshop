@@ -30,6 +30,7 @@ When creating custom hooks, it's important to follow certain rules to ensure the
 
 Here's an example of a custom hook for managing form state:
 
+```
 import { useState } from 'react';
 
 const useForm = (initialState) => {
@@ -47,7 +48,7 @@ const useForm = (initialState) => {
 };
 
 export default useForm;
-
+```
 
 ## Conclusion
 
