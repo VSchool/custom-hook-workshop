@@ -7,10 +7,10 @@ export const ThingContext = createContext()
 
 export const ThingProvider = ({ children }) => {
 
-    const thingState = useThing()
+    const thingAPI = useThing()
 
     return(
-        <ThingContext.Provider value={thingState}>
+        <ThingContext.Provider value={thingAPI}>
             {children}
         </ThingContext.Provider>
     )
