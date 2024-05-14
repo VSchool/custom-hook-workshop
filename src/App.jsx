@@ -1,5 +1,4 @@
 import './App.css'
-import { getRequest } from './http/http'
 import { useEffect, useContext } from 'react'
 import ThingForm from './components/ThingForm'
 import { ThingContext } from './context/ThingProvider'
@@ -11,7 +10,7 @@ function App() {
   const { getInitialThings } = useContext(ThingContext)
 
   useEffect(() => {
-    getRequest().then(res => getInitialThings(res))
+    getInitialThings()
   }, [])
 
 

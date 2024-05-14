@@ -1,5 +1,4 @@
 import { useForm } from '../hooks/ThingHooks';
-import { createRequest } from '../http/http';
 import { useContext } from 'react';
 import { ThingContext } from '../context/ThingProvider';
 
@@ -18,7 +17,7 @@ const ThingForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        createRequest(formData).then(res => addThing(res))
+        addThing(formData)
         clearForm()
     }
 

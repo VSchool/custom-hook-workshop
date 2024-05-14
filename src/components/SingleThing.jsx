@@ -1,8 +1,6 @@
 import { useForm } from "../hooks/ThingHooks";
-import { editRequest } from "../http/http";
 import { useContext } from "react";
 import { ThingContext } from "../context/ThingProvider";
-import { deleteRequest } from "../http/http";
 
 const SingleThing = (props) => {
 
@@ -17,12 +15,12 @@ const SingleThing = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        editRequest(_id, formData).then(res => updateThing(res))
+        updateThing(_id, formState)
         toggleForm()
     }
 
     const handleDelete = () => {
-        deleteRequest(_id).then(() => deleteThing(_id))
+        deleteThing(_id)
     }
 
 

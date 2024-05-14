@@ -9,17 +9,8 @@ export const ThingProvider = ({ children }) => {
 
     const thingState = useThing()
 
-    const {things, getInitialThings, addThing, updateThing, deleteThing} = thingState
-
-
     return(
-        <ThingContext.Provider value={{
-            things,
-            getInitialThings,
-            addThing,
-            updateThing,
-            deleteThing
-        }}>
+        <ThingContext.Provider value={thingState}>
             {children}
         </ThingContext.Provider>
     )

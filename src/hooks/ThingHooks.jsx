@@ -1,23 +1,24 @@
 import { useState } from "react";
+import { getRequest, createRequest, editRequest, deleteRequest } from "../http/http";
 
 
 export const useThing = () => {
     const [things, setThings] = useState([])
 
-    const getInitialThings = (data) => {
-        setThings(data)
+    const getInitialThings = () => {
+        getRequest().then(data => setThings(data))
     }
 
     const addThing = (thing) => {
-        setThings(prevThings => [...prevThings, thing])
+        createRequest(thing).then(data => setThings(prevThings => [...prevThings, data]))
     }
 
     const deleteThing = (id) => {
-        setThings(prevThings => prevThings.filter(thing => thing._id !== id))
+        deleteRequest(id).then(() => setThings(prevThings => prevThings.filter(thing => thing._id !== id)))
     }
 
-    const updateThing = (update) => {
-        setThings(prevThings => prevThings.map(thing => thing._id === update._id ? update : thing))
+    const updateThing = (id, update) => {
+        editRequest(id, update).then(data => setThings(prevThings => prevThings.map(thing => thing._id === data._id ? data : thing)))
     }
 
 
