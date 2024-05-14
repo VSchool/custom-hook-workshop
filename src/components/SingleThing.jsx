@@ -15,7 +15,7 @@ const SingleThing = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        updateThing(_id, formState)
+        updateThing(_id, formData)
         toggleForm()
     }
 

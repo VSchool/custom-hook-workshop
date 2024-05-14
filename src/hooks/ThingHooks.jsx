@@ -18,6 +18,7 @@ export const useThing = () => {
     }
 
     const updateThing = (id, update) => {
+        console.log(id, update)
         editRequest(id, update).then(data => setThings(prevThings => prevThings.map(thing => thing._id === data._id ? data : thing)))
     }
 
